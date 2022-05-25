@@ -15,7 +15,7 @@ public class Kata5 {
         List<Movie> movies = DataUtil.getMovies();
         double largestRating = movies.stream().reduce((movie1,movie2)->movie1.getRating() > movie2.getRating() ? movie1:movie2)
                 .map(element -> element.getRating()).get();
-        System.out.println(largestRating);
+        System.out.println("Mayor Rating: " + largestRating);
         return largestRating;
     }
 }
