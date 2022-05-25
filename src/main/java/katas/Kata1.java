@@ -7,6 +7,7 @@ import util.DataUtil;
 
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 /*
     Goal: use map() to project an array of videos into an array of {id, title}-pairs
@@ -16,7 +17,9 @@ import java.util.Map;
 public class Kata1 {
     public static List<Map> execute() {
         List<Movie> movies = DataUtil.getMovies();
-        movies.stream().map(element -> "titleMovie : " + element.getTitle() + ", idMovie : " + element.getId()).forEach(System.out::println);
-        return ImmutableList.of(ImmutableMap.of("id", 5, "title", "Bad Boys"));
+        List<Map> newList = movies.stream().map((element)->
+                Map.of("title: "+ element.getTitle()," IdMovie: "+ element.getId())).collect(Collectors.toList());
+        System.out.println(newList);
+        return  newList;
     }
 }
