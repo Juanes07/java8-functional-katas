@@ -7,12 +7,12 @@ public class Main {
         assertEquals(Kata1.execute().size(), 1);
         System.out.println("Kata 1 solved!");
 
-//        assertEquals(Kata2.execute().size(), 2);
-//        System.out.println("Kata 2 solved!");
-//
+        assertEquals(Kata2.execute().size(), 3);
+        System.out.println("Kata 2 solved!");
+
 //        assertEquals(Kata3.execute().size(), 4);
 //        System.out.println("Kata 3 solved!");
-//
+
 //        assertEquals(Kata4.execute().size(), 4);
 //        System.out.println("Kata 4 solved!");
 //

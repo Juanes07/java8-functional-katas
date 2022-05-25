@@ -16,7 +16,7 @@ import java.util.Map;
 public class Kata2 {
     public static List<Integer> execute() {
         List<Movie> movies = DataUtil.getMovies();
-
+        movies.stream().filter(element -> element.getRating() == 5.0).map(element -> "Id movie with Rating of 5.0 : " + element.getId()).forEach(System.out::println);
         return ImmutableList.of(1, 2, 3);
     }
 }
