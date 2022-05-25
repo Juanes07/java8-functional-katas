@@ -16,7 +16,7 @@ import java.util.Map;
 public class Kata1 {
     public static List<Map> execute() {
         List<Movie> movies = DataUtil.getMovies();
-
+        movies.stream().map(element -> "titleMovie : " + element.getTitle() + ", idMovie : " + element.getId()).forEach(System.out::println);
         return ImmutableList.of(ImmutableMap.of("id", 5, "title", "Bad Boys"));
     }
 }
