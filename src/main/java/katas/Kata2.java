@@ -17,10 +17,9 @@ import java.util.stream.Collectors;
 public class Kata2 {
     public static List<Integer> execute() {
         List<Movie> movies = DataUtil.getMovies();
-        List<Integer> newList = movies.stream().filter((element)->element.getRating() == 5.0).map((movie)->movie.getId()).collect(Collectors.toList());
-//        movies.stream().filter(element -> element.getRating() == 5.0)
-//                .map(element -> "Id movie with Rating of 5.0 : "
-//                        + element.getId()).forEach(System.out::println);
+        List<Integer> newList = movies.stream().
+                filter((element)->element.getRating() == 5.0)
+                .map((movie)->movie.getId()).collect(Collectors.toList());
         System.out.println("Id movie with Rating of 5.0: " + newList);
         return newList;
     }
