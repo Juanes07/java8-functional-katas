@@ -23,7 +23,9 @@ public class Kata4 {
                         Map.of("id ", video.getId(),
                                 "title ", video.getTitle(),
                                 "boxArt ", video.getBoxarts().stream()
-                                        .filter(ele -> ele.getWidth() == 150).findFirst())).collect(Collectors.toList());
+                                        .filter(ele -> ele.getWidth() == 150 && ele.getHeight() == 200)
+                                        .map(url -> url.getUrl()).collect(Collectors.toList()))).collect(Collectors.toList());
+        ;
         System.out.println(newList);
         return newList;
     }
