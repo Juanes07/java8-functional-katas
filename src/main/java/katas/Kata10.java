@@ -61,7 +61,7 @@ public class Kata10 {
                 element -> Map.of(
                         "name", element.get("name"),
                         "videosList: ", videos.stream()
-                                .filter(itemVideo -> itemVideo.get("listId").equals(element.get("id")))
+                                .filter(elementVideo -> elementVideo.get("listId").equals(element.get("id")))
                                 .map(itemVideo -> Map.of(
                                         "movieId: ", itemVideo.get("id"),
                                         "movieTitle: ", itemVideo.get("title")))
